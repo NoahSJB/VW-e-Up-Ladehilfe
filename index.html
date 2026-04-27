@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VW e-Up! Ladehilfe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+
+      <section class="picker-card" aria-labelledby="picker-title">
+        <div class="section-head">
+          <p class="section-label">Lineare Batterieanzeige - VW e-Up!</p>
+          <h2 id="picker-title">Scrollrad-Auswahl</h2>
+        </div>
+
+        <div class="wheel-frame">
+          <div class="wheel-highlight" aria-hidden="true"></div>
+          <div class="wheel-fade wheel-fade-top" aria-hidden="true"></div>
+          <div class="wheel-fade wheel-fade-bottom" aria-hidden="true"></div>
+          <div class="wheel" id="wheel" aria-label="Batterieanzeige auswählen"></div>
+        </div>
+
+        <div class="quick-actions" aria-label="Schnellauswahl">
+          <button type="button" class="chip" data-jump="100">100%</button>
+          <button type="button" class="chip" data-jump="50">50%</button>
+          <button type="button" class="chip" data-jump="6.25">6,25%</button>
+        </div>
+      </section>
+
+      <section class="result-card" aria-live="polite">
+        <p class="section-label">Zu ladende kWh bis 92% · abgerundet</p>
+        <div class="result-value">
+          <span id="kwhValue">0</span>
+          <small>kWh</small>
+        </div>
+        <p class="result-note">
+          Aktuelle lineare Anzeige:
+          <strong id="selectedDisplay">100,00%</strong>
+        </p>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
